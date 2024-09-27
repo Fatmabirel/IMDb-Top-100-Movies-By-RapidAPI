@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="title text-center my-4">IMDb Top 100 Movies</h2>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div *ngFor="let movie of topMovies; let i = index" class="col">
+      <div class="card border-danger h-100">
+        <img
+          [src]="movie.image"
+          class="card-img-top"
+          alt="{{ movie.title }}"
+          style="height: 300px; object-fit: cover"
+        />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold">TOP {{ i + 1 }}</h5>
+          <hr />
+          <p class="card-text">{{ movie.title }}</p>
+          <hr />
+          <p class="card-text">{{ movie.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
